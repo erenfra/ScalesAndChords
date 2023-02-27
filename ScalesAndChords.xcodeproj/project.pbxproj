@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		243857F329AD4BFD00E891E5 /* ScalesAndChordsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243857F229AD4BFD00E891E5 /* ScalesAndChordsApp.swift */; };
-		243857F529AD4BFD00E891E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243857F429AD4BFD00E891E5 /* ContentView.swift */; };
+		243857F529AD4BFD00E891E5 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243857F429AD4BFD00E891E5 /* TabBar.swift */; };
 		243857F729AD4BFE00E891E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243857F629AD4BFE00E891E5 /* Assets.xcassets */; };
 		243857FA29AD4BFE00E891E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 243857F929AD4BFE00E891E5 /* Preview Assets.xcassets */; };
+		2438580129AD4C5200E891E5 /* ScalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438580029AD4C5200E891E5 /* ScalesView.swift */; };
+		2438580329AD4CCC00E891E5 /* ChordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438580229AD4CCC00E891E5 /* ChordsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		243857EF29AD4BFD00E891E5 /* ScalesAndChords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScalesAndChords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		243857F229AD4BFD00E891E5 /* ScalesAndChordsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesAndChordsApp.swift; sourceTree = "<group>"; };
-		243857F429AD4BFD00E891E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		243857F429AD4BFD00E891E5 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		243857F629AD4BFE00E891E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		243857F929AD4BFE00E891E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2438580029AD4C5200E891E5 /* ScalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalesView.swift; sourceTree = "<group>"; };
+		2438580229AD4CCC00E891E5 /* ChordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,8 @@
 		243857F129AD4BFD00E891E5 /* ScalesAndChords */ = {
 			isa = PBXGroup;
 			children = (
+				2438580429AD4DBD00E891E5 /* Views */,
 				243857F229AD4BFD00E891E5 /* ScalesAndChordsApp.swift */,
-				243857F429AD4BFD00E891E5 /* ContentView.swift */,
 				243857F629AD4BFE00E891E5 /* Assets.xcassets */,
 				243857F829AD4BFE00E891E5 /* Preview Content */,
 			);
@@ -65,6 +69,16 @@
 				243857F929AD4BFE00E891E5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2438580429AD4DBD00E891E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				243857F429AD4BFD00E891E5 /* TabBar.swift */,
+				2438580029AD4C5200E891E5 /* ScalesView.swift */,
+				2438580229AD4CCC00E891E5 /* ChordsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				243857F529AD4BFD00E891E5 /* ContentView.swift in Sources */,
+				2438580129AD4C5200E891E5 /* ScalesView.swift in Sources */,
+				2438580329AD4CCC00E891E5 /* ChordsView.swift in Sources */,
+				243857F529AD4BFD00E891E5 /* TabBar.swift in Sources */,
 				243857F329AD4BFD00E891E5 /* ScalesAndChordsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +286,7 @@
 				DEVELOPMENT_TEAM = L5MEY32333;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Scales and Chords";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -282,9 +299,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fraga.renato.ScalesAndChords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -299,6 +319,7 @@
 				DEVELOPMENT_TEAM = L5MEY32333;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Scales and Chords";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,9 +332,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fraga.renato.ScalesAndChords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
